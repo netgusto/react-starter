@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'react/addons';
+import React from 'react';
 
 export default class App extends React.Component {
 
@@ -9,9 +9,12 @@ export default class App extends React.Component {
     };
 
     render() {
+
+        const { user } = this.context;
+
         return (
             <div className='container'>
-                <h1><i className="fa fa-rocket" /> Hello, World !</h1>
+                <h1><i className="fa fa-rocket" /> Hello, {user.firstname} {user.lastname} !</h1>
             </div>
         );
     }
